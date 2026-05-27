@@ -1,0 +1,16 @@
+# Jupyter Notebooks
+*.ipynb
+
+# Image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.svg
+*.webp
+*.tiff
+*.tif
+GenderDetection.ipynb
+FaceCroppingWithHair.ipynb
+Photos/
