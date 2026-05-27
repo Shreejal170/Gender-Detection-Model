@@ -11,5 +11,11 @@
 GenderDetection.ipynb
 FaceCroppingWithHair.ipynb
 Photos/
+benchmark_results.json
+benchmark_aakriti.py
 
 benchmark.py
+
+# Allow tracking of test_images directory and its contents
+!test_images/
+!test_images/**
