@@ -1,0 +1,878 @@
+{
+    "bishal": {
+        "overall": {
+            "accuracy": 0.95,
+            "female_accuracy": 0.9090909090909091,
+            "male_accuracy": 0.9655172413793104,
+            "precision": 0.9655172413793104,
+            "recall": 0.9655172413793104,
+            "f1_score": 0.9655172413793104,
+            "avg_pipeline_time_ms": 273.6936840584608,
+            "median_pipeline_time_ms": 267.0431137084961,
+            "std_pipeline_time_ms": 41.112108403157016,
+            "avg_det_time_ms": 265.9874210512735,
+            "avg_model_time_ms": 1.2953893925116313,
+            "num_parameters": 198658,
+            "disk_size_mb": 0.7675676345825195
+        },
+        "detailed": {
+            "Aakriti_22_0.jpeg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9993380904197693,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2920655409495036,
+                "avg_det_time": 0.27053263982137044,
+                "avg_model_time": 0.0018909454345703125,
+                "is_confusing": false
+            },
+            "Abiral_23_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9999450445175171,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2616457462310791,
+                "avg_det_time": 0.25819907188415525,
+                "avg_model_time": 0.0008267561594645182,
+                "is_confusing": false
+            },
+            "Bhuvam_32_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9991742968559265,
+                "is_correct": true,
+                "avg_pipeline_time": 0.26827901204427085,
+                "avg_det_time": 0.2658560752868652,
+                "avg_model_time": 0.0011242071787516275,
+                "is_confusing": false
+            },
+            "Bijit_21_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9999955892562866,
+                "is_correct": true,
+                "avg_pipeline_time": 0.26011164983113605,
+                "avg_det_time": 0.2544870376586914,
+                "avg_model_time": 0.0016814867655436199,
+                "is_confusing": false
+            },
+            "Dayahyang_46_1.webp": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9977139234542847,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2608920097351074,
+                "avg_det_time": 0.2562093257904053,
+                "avg_model_time": 0.0007325490315755208,
+                "is_confusing": false
+            },
+            "Dinesh_25_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9991220831871033,
+                "is_correct": true,
+                "avg_pipeline_time": 0.45576752026875816,
+                "avg_det_time": 0.45113983154296877,
+                "avg_model_time": 0.0011591911315917969,
+                "is_confusing": false
+            },
+            "Paresh_67_1.webp": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9917342662811279,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2633449872334798,
+                "avg_det_time": 0.2572302977244059,
+                "avg_model_time": 0.0020174026489257813,
+                "is_confusing": false
+            },
+            "Rabi_51_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.988561749458313,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2636744817097982,
+                "avg_det_time": 0.2581068833669027,
+                "avg_model_time": 0.0015584309895833334,
+                "is_confusing": false
+            },
+            "Rajpal_55_1.jpeg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9999939203262329,
+                "is_correct": true,
+                "avg_pipeline_time": 0.26147756576538084,
+                "avg_det_time": 0.25641361872355145,
+                "avg_model_time": 0.001582177480061849,
+                "is_confusing": false
+            },
+            "Sachdev_36_0.jpg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9999316930770874,
+                "is_correct": true,
+                "avg_pipeline_time": 0.27329670588175453,
+                "avg_det_time": 0.2639246145884196,
+                "avg_model_time": 0.0008418401082356771,
+                "is_confusing": false
+            },
+            "Sher_79_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9327045679092407,
+                "is_correct": true,
+                "avg_pipeline_time": 0.26495540936787926,
+                "avg_det_time": 0.2568617502848307,
+                "avg_model_time": 0.0030643781026204425,
+                "is_confusing": false
+            },
+            "Shreejal_22_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9999998807907104,
+                "is_correct": true,
+                "avg_pipeline_time": 0.26507846514383954,
+                "avg_det_time": 0.2552587827046712,
+                "avg_model_time": 0.0012077013651529947,
+                "is_confusing": false
+            },
+            "Swastima_30_0.webp": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.838610827922821,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2610146681467692,
+                "avg_det_time": 0.2546631018320719,
+                "avg_model_time": 0.001047372817993164,
+                "is_confusing": false
+            },
+            "ana_36_0.jpg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9999876022338867,
+                "is_correct": true,
+                "avg_pipeline_time": 0.25885241826375327,
+                "avg_det_time": 0.25063199996948243,
+                "avg_model_time": 0.0013351758321126302,
+                "is_confusing": false
+            },
+            "ananya_27_0.jpg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9974808096885681,
+                "is_correct": true,
+                "avg_pipeline_time": 0.26710883776346844,
+                "avg_det_time": 0.26409681638081867,
+                "avg_model_time": 0.000888204574584961,
+                "is_confusing": false
+            },
+            "anya_29_0.webp": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9996016621589661,
+                "is_correct": true,
+                "avg_pipeline_time": 0.263438622156779,
+                "avg_det_time": 0.25869240760803225,
+                "avg_model_time": 0.0010574817657470702,
+                "is_confusing": false
+            },
+            "bajrangee_7_0.png": {
+                "true_label": 0,
+                "predicted_label": 1,
+                "confidence": 0.960272490978241,
+                "is_correct": false,
+                "avg_pipeline_time": 0.2594312032063802,
+                "avg_det_time": 0.25753520329793295,
+                "avg_model_time": 0.0006242434183756511,
+                "is_confusing": false
+            },
+            "balen_36_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 1.0,
+                "is_correct": true,
+                "avg_pipeline_time": 0.25612592697143555,
+                "avg_det_time": 0.2541094462076823,
+                "avg_model_time": 0.0009469191233317057,
+                "is_confusing": false
+            },
+            "charles_27_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9999966621398926,
+                "is_correct": true,
+                "avg_pipeline_time": 0.26347710291544596,
+                "avg_det_time": 0.25869383811950686,
+                "avg_model_time": 0.0026607831319173177,
+                "is_confusing": false
+            },
+            "confusing_face.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 1.0,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2705456892649333,
+                "avg_det_time": 0.26258058547973634,
+                "avg_model_time": 0.0008331616719563802,
+                "is_confusing": true
+            },
+            "cris_40_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9999866485595703,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2698256015777588,
+                "avg_det_time": 0.26397956212361656,
+                "avg_model_time": 0.0007812182108561198,
+                "is_confusing": false
+            },
+            "daniel_12_1.webp": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9774290323257446,
+                "is_correct": true,
+                "avg_pipeline_time": 0.28128690719604493,
+                "avg_det_time": 0.2577612082163493,
+                "avg_model_time": 0.0026709715525309245,
+                "is_confusing": false
+            },
+            "donk_18_1.png": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.8698964715003967,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2674631913503011,
+                "avg_det_time": 0.2626003424326579,
+                "avg_model_time": 0.0010736465454101562,
+                "is_confusing": false
+            },
+            "dre_60_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9981871247291565,
+                "is_correct": true,
+                "avg_pipeline_time": 0.27135149637858075,
+                "avg_det_time": 0.2688908100128174,
+                "avg_model_time": 0.0010634104410807291,
+                "is_confusing": false
+            },
+            "fluffy_48_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9999512434005737,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2772766272226969,
+                "avg_det_time": 0.2691024303436279,
+                "avg_model_time": 0.0011212666829427083,
+                "is_confusing": false
+            },
+            "gab_35_0.jpg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9983022212982178,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2595898946126302,
+                "avg_det_time": 0.2578354199727376,
+                "avg_model_time": 0.0006499608357747396,
+                "is_confusing": false
+            },
+            "jack_35_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9999418258666992,
+                "is_correct": true,
+                "avg_pipeline_time": 0.29508708318074545,
+                "avg_det_time": 0.25522209803263346,
+                "avg_model_time": 0.002010154724121094,
+                "is_confusing": false
+            },
+            "jennifer_33_0.jpg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9999606609344482,
+                "is_correct": true,
+                "avg_pipeline_time": 0.27308595975240074,
+                "avg_det_time": 0.25605182647705077,
+                "avg_model_time": 0.002073335647583008,
+                "is_confusing": false
+            },
+            "jenno_55_0.jpg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9992160797119141,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2743239879608154,
+                "avg_det_time": 0.26597684224446616,
+                "avg_model_time": 0.0007078329722086589,
+                "is_confusing": false
+            },
+            "kumar_58_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9998775720596313,
+                "is_correct": true,
+                "avg_pipeline_time": 0.25966154734293617,
+                "avg_det_time": 0.25753369331359866,
+                "avg_model_time": 0.0007647514343261719,
+                "is_confusing": false
+            },
+            "kyousuke_17_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9970952272415161,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2733635743459066,
+                "avg_det_time": 0.26670867602030435,
+                "avg_model_time": 0.000891876220703125,
+                "is_confusing": false
+            },
+            "matthew_55_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 1.0,
+                "is_correct": true,
+                "avg_pipeline_time": 0.26983145078023274,
+                "avg_det_time": 0.259859561920166,
+                "avg_model_time": 0.0007938543955485026,
+                "is_confusing": false
+            },
+            "modi_75_1.webp": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9999967813491821,
+                "is_correct": true,
+                "avg_pipeline_time": 0.26876397132873536,
+                "avg_det_time": 0.26429303487141925,
+                "avg_model_time": 0.0007344563802083333,
+                "is_confusing": false
+            },
+            "neer_12_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 0,
+                "confidence": 0.8311131596565247,
+                "is_correct": false,
+                "avg_pipeline_time": 0.2655460516611735,
+                "avg_det_time": 0.2630432605743408,
+                "avg_model_time": 0.0014452616373697917,
+                "is_confusing": false
+            },
+            "obama_50_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9135594367980957,
+                "is_correct": true,
+                "avg_pipeline_time": 0.271270481745402,
+                "avg_det_time": 0.26376895904541015,
+                "avg_model_time": 0.0006535689036051433,
+                "is_confusing": false
+            },
+            "rohan_43_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.999994158744812,
+                "is_correct": true,
+                "avg_pipeline_time": 0.26249616940816245,
+                "avg_det_time": 0.258964474995931,
+                "avg_model_time": 0.0016933441162109374,
+                "is_confusing": false
+            },
+            "samay_28_1.webp": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9996925592422485,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2707615534464518,
+                "avg_det_time": 0.2684874375661214,
+                "avg_model_time": 0.0009617169698079427,
+                "is_confusing": false
+            },
+            "show_21_1.webp": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.6833416223526001,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2750272750854492,
+                "avg_det_time": 0.2682294050852458,
+                "avg_model_time": 0.0009683767954508463,
+                "is_confusing": false
+            },
+            "tenz_22_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.8382827043533325,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2838743686676025,
+                "avg_det_time": 0.2670781930287679,
+                "avg_model_time": 0.0018898804982503256,
+                "is_confusing": false
+            },
+            "trump_78_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.999462902545929,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2847870667775472,
+                "avg_det_time": 0.27612150510152184,
+                "avg_model_time": 0.001986074447631836,
+                "is_confusing": false
+            },
+            "zendaya_28_0.jpg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9719803333282471,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2761832237243652,
+                "avg_det_time": 0.2687521934509277,
+                "avg_model_time": 0.00109559694925944,
+                "is_confusing": false
+            }
+        },
+        "confusing": {
+            "filename": "confusing_face.jpg",
+            "true_label": 1,
+            "predicted_label": 1,
+            "predicted_str": "Male",
+            "confidence": 1.0,
+            "is_correct": true,
+            "avg_pipeline_time": 0.2705456892649333
+        }
+    },
+    "shreejal": {
+        "overall": {
+            "accuracy": 1.0,
+            "female_accuracy": 1.0,
+            "male_accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "avg_pipeline_time_ms": 237.1183907113424,
+            "median_pipeline_time_ms": 227.71239280700684,
+            "std_pipeline_time_ms": 34.72436816386247,
+            "avg_det_time_ms": 106.74489804399693,
+            "avg_model_time_ms": 122.18868751836017,
+            "num_parameters": 4010110,
+            "disk_size_mb": 15.585505485534668
+        },
+        "detailed": {
+            "Aakriti_22_0.jpeg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9594300985336304,
+                "is_correct": true,
+                "avg_pipeline_time": 0.24620758692423503,
+                "avg_det_time": 0.1072600523630778,
+                "avg_model_time": 0.11713892618815104,
+                "is_confusing": false
+            },
+            "Abiral_23_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9766855239868164,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2180950164794922,
+                "avg_det_time": 0.10064590771993001,
+                "avg_model_time": 0.11471098264058431,
+                "is_confusing": false
+            },
+            "Bhuvam_32_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9643804430961609,
+                "is_correct": true,
+                "avg_pipeline_time": 0.22412975629170737,
+                "avg_det_time": 0.10633594195048014,
+                "avg_model_time": 0.11657594045003256,
+                "is_confusing": false
+            },
+            "Bijit_21_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9043064117431641,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2198657512664795,
+                "avg_det_time": 0.10390057563781738,
+                "avg_model_time": 0.11175120671590169,
+                "is_confusing": false
+            },
+            "Dayahyang_46_1.webp": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9682180881500244,
+                "is_correct": true,
+                "avg_pipeline_time": 0.23596343994140626,
+                "avg_det_time": 0.10891051292419433,
+                "avg_model_time": 0.12251194318135579,
+                "is_confusing": false
+            },
+            "Dinesh_25_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.8933892250061035,
+                "is_correct": true,
+                "avg_pipeline_time": 0.23769235610961914,
+                "avg_det_time": 0.11050497690836589,
+                "avg_model_time": 0.12343196868896485,
+                "is_confusing": false
+            },
+            "Paresh_67_1.webp": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.7956893444061279,
+                "is_correct": true,
+                "avg_pipeline_time": 0.22829726537068684,
+                "avg_det_time": 0.10525035858154297,
+                "avg_model_time": 0.11819790204366049,
+                "is_confusing": false
+            },
+            "Rabi_51_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9996783137321472,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2296188513437907,
+                "avg_det_time": 0.10600112279256185,
+                "avg_model_time": 0.11940072377522787,
+                "is_confusing": false
+            },
+            "Rajpal_55_1.jpeg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.8811218738555908,
+                "is_correct": true,
+                "avg_pipeline_time": 0.22660544713338215,
+                "avg_det_time": 0.10576491355895996,
+                "avg_model_time": 0.11695822079976399,
+                "is_confusing": false
+            },
+            "Sachdev_36_0.jpg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9103907942771912,
+                "is_correct": true,
+                "avg_pipeline_time": 0.22811365127563477,
+                "avg_det_time": 0.10546875,
+                "avg_model_time": 0.11306740442911783,
+                "is_confusing": false
+            },
+            "Sher_79_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9729901552200317,
+                "is_correct": true,
+                "avg_pipeline_time": 0.23503848711649578,
+                "avg_det_time": 0.10729773839314778,
+                "avg_model_time": 0.1219022274017334,
+                "is_confusing": false
+            },
+            "Shreejal_22_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9764795303344727,
+                "is_correct": true,
+                "avg_pipeline_time": 0.22759548823038736,
+                "avg_det_time": 0.10629789034525554,
+                "avg_model_time": 0.11142354011535645,
+                "is_confusing": false
+            },
+            "Swastima_30_0.webp": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.957940399646759,
+                "is_correct": true,
+                "avg_pipeline_time": 0.22131834030151368,
+                "avg_det_time": 0.10245890617370605,
+                "avg_model_time": 0.11314775149027506,
+                "is_confusing": false
+            },
+            "ana_36_0.jpg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9221283793449402,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2380448341369629,
+                "avg_det_time": 0.10380959510803223,
+                "avg_model_time": 0.12455205917358399,
+                "is_confusing": false
+            },
+            "ananya_27_0.jpg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9363855719566345,
+                "is_correct": true,
+                "avg_pipeline_time": 0.22525420188903808,
+                "avg_det_time": 0.1068877379099528,
+                "avg_model_time": 0.11612397829691569,
+                "is_confusing": false
+            },
+            "anya_29_0.webp": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.931281566619873,
+                "is_correct": true,
+                "avg_pipeline_time": 0.22436126073201498,
+                "avg_det_time": 0.10357027053833008,
+                "avg_model_time": 0.11665565172831217,
+                "is_confusing": false
+            },
+            "bajrangee_7_0.png": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9409688711166382,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2199422518412272,
+                "avg_det_time": 0.10396089553833007,
+                "avg_model_time": 0.11466097831726074,
+                "is_confusing": false
+            },
+            "balen_36_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9966984987258911,
+                "is_correct": true,
+                "avg_pipeline_time": 0.230132532119751,
+                "avg_det_time": 0.10819102923075358,
+                "avg_model_time": 0.12086952527364095,
+                "is_confusing": false
+            },
+            "charles_27_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9600597023963928,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2336797555287679,
+                "avg_det_time": 0.11095075607299805,
+                "avg_model_time": 0.12024435997009278,
+                "is_confusing": false
+            },
+            "confusing_face.jpg": {
+                "true_label": 1,
+                "predicted_label": 0,
+                "confidence": 0.505059540271759,
+                "is_correct": false,
+                "avg_pipeline_time": 0.24188361167907715,
+                "avg_det_time": 0.10644693374633789,
+                "avg_model_time": 0.1256743590037028,
+                "is_confusing": true
+            },
+            "cris_40_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9706949591636658,
+                "is_correct": true,
+                "avg_pipeline_time": 0.229941987991333,
+                "avg_det_time": 0.10472421646118164,
+                "avg_model_time": 0.11964796384175619,
+                "is_confusing": false
+            },
+            "daniel_12_1.webp": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.6718955636024475,
+                "is_correct": true,
+                "avg_pipeline_time": 0.24909464518229166,
+                "avg_det_time": 0.1023686408996582,
+                "avg_model_time": 0.12162478764851888,
+                "is_confusing": false
+            },
+            "donk_18_1.png": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.6642937064170837,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2352648417154948,
+                "avg_det_time": 0.10858461062113443,
+                "avg_model_time": 0.12270415623982747,
+                "is_confusing": false
+            },
+            "dre_60_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9112018346786499,
+                "is_correct": true,
+                "avg_pipeline_time": 0.22211502393086752,
+                "avg_det_time": 0.10384588241577149,
+                "avg_model_time": 0.11673097610473633,
+                "is_confusing": false
+            },
+            "fluffy_48_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9937686324119568,
+                "is_correct": true,
+                "avg_pipeline_time": 0.23481113115946453,
+                "avg_det_time": 0.10500683784484863,
+                "avg_model_time": 0.12091274261474609,
+                "is_confusing": false
+            },
+            "gab_35_0.jpg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9365435242652893,
+                "is_correct": true,
+                "avg_pipeline_time": 0.22342885335286458,
+                "avg_det_time": 0.11101196606953939,
+                "avg_model_time": 0.11139060656229655,
+                "is_confusing": false
+            },
+            "jack_35_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9999288320541382,
+                "is_correct": true,
+                "avg_pipeline_time": 0.30392683347066246,
+                "avg_det_time": 0.0993997573852539,
+                "avg_model_time": 0.1410723050435384,
+                "is_confusing": false
+            },
+            "jennifer_33_0.jpg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9567575454711914,
+                "is_correct": true,
+                "avg_pipeline_time": 0.25832173029581706,
+                "avg_det_time": 0.10748400688171386,
+                "avg_model_time": 0.13203676541646323,
+                "is_confusing": false
+            },
+            "jenno_55_0.jpg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.9333854913711548,
+                "is_correct": true,
+                "avg_pipeline_time": 0.23859036763509114,
+                "avg_det_time": 0.10545914967854818,
+                "avg_model_time": 0.12310673395792643,
+                "is_confusing": false
+            },
+            "kumar_58_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9968181848526001,
+                "is_correct": true,
+                "avg_pipeline_time": 0.23758436838785807,
+                "avg_det_time": 0.1108914057413737,
+                "avg_model_time": 0.12534232139587403,
+                "is_confusing": false
+            },
+            "kyousuke_17_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9560649991035461,
+                "is_correct": true,
+                "avg_pipeline_time": 0.258383576075236,
+                "avg_det_time": 0.1144686222076416,
+                "avg_model_time": 0.13660287857055664,
+                "is_confusing": false
+            },
+            "matthew_55_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9990589022636414,
+                "is_correct": true,
+                "avg_pipeline_time": 0.24317728678385417,
+                "avg_det_time": 0.1072064717610677,
+                "avg_model_time": 0.12287559509277343,
+                "is_confusing": false
+            },
+            "modi_75_1.webp": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9975125193595886,
+                "is_correct": true,
+                "avg_pipeline_time": 0.24053481419881184,
+                "avg_det_time": 0.1081007957458496,
+                "avg_model_time": 0.12794424692789713,
+                "is_confusing": false
+            },
+            "neer_12_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.8136223554611206,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2305560270945231,
+                "avg_det_time": 0.10609602928161621,
+                "avg_model_time": 0.12332301139831543,
+                "is_confusing": false
+            },
+            "obama_50_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9883032441139221,
+                "is_correct": true,
+                "avg_pipeline_time": 0.23747634887695312,
+                "avg_det_time": 0.10630054473876953,
+                "avg_model_time": 0.12376523017883301,
+                "is_confusing": false
+            },
+            "rohan_43_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.8850181102752686,
+                "is_correct": true,
+                "avg_pipeline_time": 0.23293797175089517,
+                "avg_det_time": 0.10614555676778158,
+                "avg_model_time": 0.12463863690694173,
+                "is_confusing": false
+            },
+            "samay_28_1.webp": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9802390933036804,
+                "is_correct": true,
+                "avg_pipeline_time": 0.24753365516662598,
+                "avg_det_time": 0.1130333423614502,
+                "avg_model_time": 0.13319433530171712,
+                "is_confusing": false
+            },
+            "show_21_1.webp": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9259597659111023,
+                "is_correct": true,
+                "avg_pipeline_time": 0.23514539400736492,
+                "avg_det_time": 0.10821223258972168,
+                "avg_model_time": 0.12072610855102539,
+                "is_confusing": false
+            },
+            "tenz_22_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.5503395795822144,
+                "is_correct": true,
+                "avg_pipeline_time": 0.2634683609008789,
+                "avg_det_time": 0.1074468453725179,
+                "avg_model_time": 0.13691507975260417,
+                "is_confusing": false
+            },
+            "trump_78_1.jpg": {
+                "true_label": 1,
+                "predicted_label": 1,
+                "confidence": 0.9518463611602783,
+                "is_correct": true,
+                "avg_pipeline_time": 0.25905699729919435,
+                "avg_det_time": 0.11149023373921713,
+                "avg_model_time": 0.1374833583831787,
+                "is_confusing": false
+            },
+            "zendaya_28_0.jpg": {
+                "true_label": 0,
+                "predicted_label": 0,
+                "confidence": 0.8617691993713379,
+                "is_correct": true,
+                "avg_pipeline_time": 0.24866391817728678,
+                "avg_det_time": 0.10934880574544271,
+                "avg_model_time": 0.12869869867960612,
+                "is_confusing": false
+            }
+        },
+        "confusing": {
+            "filename": "confusing_face.jpg",
+            "true_label": 1,
+            "predicted_label": 0,
+            "predicted_str": "Female",
+            "confidence": 0.505059540271759,
+            "is_correct": false,
+            "avg_pipeline_time": 0.24188361167907715
+        }
+    }
+}

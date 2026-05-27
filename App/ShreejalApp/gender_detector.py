@@ -21,6 +21,7 @@ import os
 import sys
 import argparse
 import logging
+import math
 from enum import Enum
 from typing import Dict, Tuple, Any
 # from datetime import time
@@ -45,10 +46,11 @@ try:
     from torchvision import models, transforms
     from PIL import Image
     from insightface.app import FaceAnalysis
+    import matplotlib.pyplot as plt
 except ImportError as e:
     logger.error(
         f"Missing required dependency: {e.name}. "
-        "Please ensure PyTorch, Torchvision, OpenCV, InsightFace, Pillow, and NumPy are installed."
+        "Please ensure PyTorch, Torchvision, OpenCV, InsightFace, Pillow, NumPy, and Matplotlib are installed."
     )
     sys.exit(1)
 
@@ -267,20 +269,128 @@ class GenderDetector:
         return consensus_enum, detailed_results
 
 
+def process_single_image(detector: GenderDetector, image_path: str):
+    """Handles iteration logic for a single image specifically passing outputs to stdout."""
+    result_enum, details = detector.analyze_image(image_path)
+
+    # Handle no face detection gracefully according to requirement
+    if result_enum == GenderEnum.NO_FACE_DETECTED:
+        sys.exit(1)
+
+    # Display results in a beautifully formatted table
+    print("\n" + "=" * 55)
+    print(f"       GENDER ANALYSIS RESULTS: {os.path.basename(image_path)}")
+    print("=" * 55)
+    print(f"{'Crop Strategy':<25} | {'Predicted':<10} | {'Confidence':<10}")
+    print("-" * 55)
+
+    for crop_name, info in details["crops"].items():
+        print(f"{crop_name:<25} | {info['label']:<10} | {info['confidence']:.2f}%")
+
+    print("-" * 55)
+    
+    # Display the ensemble average results
+    avg_info = details["average"]
+    print(f"{'ENSEMBLE AVERAGE (4 Crops)':<25} | {avg_info['label']:<10} | {avg_info['confidence']:.2f}%")
+    print("=" * 55)
+    print(f"Final Enum Value: {result_enum}")
+    print("=" * 55 + "\n")
+
+
+def process_folder(detector: GenderDetector, folder_path: str):
+    """Processes all images in a folder and constructs a cleanly formatted Matplotlib plot."""
+    valid_extensions = ('.png', '.jpg', '.jpeg', '.avif', '.webp')
+    image_paths = [
+        os.path.join(folder_path, f)
+        for f in os.listdir(folder_path)
+        if f.lower().endswith(valid_extensions)
+    ]
+    
+    if not image_paths:
+        logger.error(f"No valid images found in {folder_path}")
+        return
+        
+    cols = 3
+    rows = math.ceil(len(image_paths) / cols)
+    
+    fig, axes = plt.subplots(rows, cols, figsize=(15, 5 * rows))
+    
+    # Handle single subplot edge-case safely
+    if not isinstance(axes, np.ndarray):
+        axes = np.array([axes])
+    axes = axes.flatten()
+    
+    for idx, img_path in enumerate(image_paths):
+        ax = axes[idx]
+        
+        img = cv2.imread(img_path)
+        
+        if img is None:
+            ax.set_title("LOAD FAILED", fontsize=10)
+            ax.axis("off")
+            continue
+            
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        
+        ax.imshow(img)
+        ax.axis("off")
+        
+        try:
+            result_enum, details = detector.analyze_image(img_path)
+            
+            # handle failure cases
+            if result_enum == GenderEnum.NO_FACE_DETECTED:
+                ax.set_title(result_enum.value, fontsize=10)
+                continue
+                
+            # ONLY gender + confidence
+            avg_info = details["average"]
+            gender = avg_info['label']
+            conf = avg_info['confidence'] / 100.0  # Bring to 0.0-1.0 scale
+            
+            ax.set_title(
+                f"{gender} ({conf:.2f})",
+                fontsize=12
+            )
+            
+        except Exception as e:
+            ax.set_title("ERROR PROCESSING", fontsize=10)
+            
+    # hide empty plots
+    for i in range(len(image_paths), len(axes)):
+        axes[i].axis("off")
+        
+    plt.tight_layout()
+    
+    # save output
+    out_path = os.path.join(os.getcwd(), "gender_predictions.png")
+    plt.savefig(out_path, dpi=300, bbox_inches="tight")
+    
+    plt.show()
+    
+    print("Saved to:", out_path)
+
+
 def main():
     """
     Main function providing Command-Line Interface (CLI) execution capability.
     """
-    default_model_path = r"C:\Users\shree\Documents\Veel\GenderDetection\model_download_gender\kaggle\working\best_gender_model.pth"
+    default_model_path = r"C:\Users\shree\Documents\Veel\GenderDetection\ShreejalGenderPredictionModel\gender_prediction_model.pth"
 
     parser = argparse.ArgumentParser(
-        description="Run clean, 4-tier crop averaged gender detection on a face image."
+        description="Run clean, 4-tier crop averaged gender detection on a face image or a whole folder."
     )
-    parser.add_argument(
+    
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument(
         "--image",
-        required=True,
-        help="Path to the image file to analyze."
+        help="Path to the single image file to analyze."
     )
+    group.add_argument(
+        "--folder",
+        help="Path to the target folder containing images for grid inspection."
+    )
+    
     parser.add_argument(
         "--model",
         default=default_model_path,
@@ -298,33 +408,10 @@ def main():
         # Initialize detector
         detector = GenderDetector(model_weights_path=args.model, device=args.device)
 
-        # Analyze image
-        result_enum, details = detector.analyze_image(args.image)
-
-        # Handle no face detection gracefully according to requirement
-        if result_enum == GenderEnum.NO_FACE_DETECTED:
-            # Note: logging.error has already logged "no face detected" inside analyze_image
-            # Stop executing and exit with error code
-            sys.exit(1)
-
-        # Display results in a beautifully formatted table
-        print("\n" + "=" * 55)
-        print(f"       GENDER ANALYSIS RESULTS: {os.path.basename(args.image)}")
-        print("=" * 55)
-        print(f"{'Crop Strategy':<25} | {'Predicted':<10} | {'Confidence':<10}")
-        print("-" * 55)
-
-        for crop_name, info in details["crops"].items():
-            print(f"{crop_name:<25} | {info['label']:<10} | {info['confidence']:.2f}%")
-
-        print("-" * 55)
-        
-        # Display the ensemble average results
-        avg_info = details["average"]
-        print(f"{'ENSEMBLE AVERAGE (4 Crops)':<25} | {avg_info['label']:<10} | {avg_info['confidence']:.2f}%")
-        print("=" * 55)
-        print(f"Final Enum Value: {result_enum}")
-        print("=" * 55 + "\n")
+        if args.image:
+            process_single_image(detector, args.image)
+        elif args.folder:
+            process_folder(detector, args.folder)
 
         # Exit successfully
         sys.exit(0)
